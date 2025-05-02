@@ -1,5 +1,7 @@
 package org.lessons.java.shop;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Random;
 
 public class Prodotto {
@@ -30,6 +32,16 @@ public class Prodotto {
     // Price without IVA
     public float basePrice() {
         return this.price;
+    }
+
+    // Price with IVA
+    public float taxedPrice() {
+        float updatedPrice = this.price + (this.price * (this.iva / 100f));
+        BigDecimal bd = new BigDecimal(updatedPrice);
+
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+
+        return bd.floatValue();
     }
 
 }
