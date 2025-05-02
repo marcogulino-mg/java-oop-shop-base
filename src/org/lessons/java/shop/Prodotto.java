@@ -44,4 +44,9 @@ public class Prodotto {
         return bd.floatValue();
     }
 
+    // Show product code+name
+    public String infosProd() {
+        return this.code + this.name;
+    }
+
 }
