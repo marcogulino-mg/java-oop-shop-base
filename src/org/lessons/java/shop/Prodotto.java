@@ -1,5 +1,7 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+
 public class Prodotto {
     // Attributes
     public int code;
@@ -11,11 +13,17 @@ public class Prodotto {
     // Methods
 
     // Construct
-    public Prodotto(int code, String name, String description, float price, int iva) {
-        this.code = code;
+    public Prodotto(String name, String description, float price, int iva) {
+        this.code = generateCode();
         this.name = name;
         this.description = description;
         this.price = price;
         this.iva = iva;
+    }
+
+    // Random code generator
+    public int generateCode() {
+        Random rand = new Random();
+        return 100000000 + rand.nextInt(50000);
     }
 }
