@@ -26,4 +26,10 @@ public class Prodotto {
         Random rand = new Random();
         return 100000000 + rand.nextInt(50000);
     }
+
+    // Price without IVA
+    public float basePrice() {
+        return this.price;
+    }
+
 }
