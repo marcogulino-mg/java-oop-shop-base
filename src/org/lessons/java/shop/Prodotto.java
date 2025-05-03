@@ -16,7 +16,16 @@ public class Prodotto {
 
     // * Methods
 
-    // * Construct
+    // * Constructs
+    public Prodotto() {
+        this.code = generateCode();
+        this.name = "Missing Name";
+        this.description = "Missing Description";
+        this.brand = "Missing Brand";
+        this.price = 0;
+        this.iva = 0;
+    }
+
     public Prodotto(String name, String description, String brand, float price, int iva) {
         this.code = generateCode();
         this.name = name;
