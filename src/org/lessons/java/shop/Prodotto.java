@@ -27,6 +27,12 @@ public class Prodotto {
     }
 
     // * Other Methods
+    // Random code generator
+    private int generateCode() {
+        Random rand = new Random();
+        return 100000000 + rand.nextInt(50000);
+    }
+
     // Price with IVA
     public float taxedPrice() {
         float updatedPrice = this.price + (this.price * (this.iva / 100f));
@@ -68,9 +74,25 @@ public class Prodotto {
     }
 
     // * Setter
-    // Random code generator
-    public int generateCode() {
-        Random rand = new Random();
-        return 100000000 + rand.nextInt(50000);
+
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public void setIva(int iva) {
+        this.iva = iva;
+    }
+
 }
