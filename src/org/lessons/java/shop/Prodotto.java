@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Prodotto {
     // Attributes
-    public int code;
+    private int code;
     public String name;
     public String description;
     public float price;
@@ -39,7 +39,7 @@ public class Prodotto {
         float updatedPrice = this.price + (this.price * (this.iva / 100f));
         BigDecimal bd = new BigDecimal(updatedPrice);
 
-        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        bd = bd.setScale(2, RoundingMode.DOWN);
 
         return bd.floatValue();
     }
@@ -47,6 +47,11 @@ public class Prodotto {
     // Show product code+name
     public String infosProd() {
         return this.code + this.name;
+    }
+
+    // Show product code
+    public int showCode() {
+        return this.code;
     }
 
 }

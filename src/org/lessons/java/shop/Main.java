@@ -21,5 +21,8 @@ public class Main {
         System.out.println(latte.infosProd());
         System.out.println(gpuNvidia5070.infosProd());
 
+        // Show Product code
+        System.out.println(latte.showCode());
+        System.out.println(gpuNvidia5070.showCode());
     }
 }
