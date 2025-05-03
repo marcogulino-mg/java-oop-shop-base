@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         // Obj instances
-        Prodotto latte = new Prodotto("Parmalat Latte", "Latte Scremato", 32.10f, 4);
-        Prodotto gpuNvidia5070 = new Prodotto("Nvidia RTX 5070 16GB", "Nvidia graphics card", 599.99f, 22);
+        Prodotto latte = new Prodotto("Parmalat Latte", "Latte Scremato", "Parmalat", 32.10f, 4);
+        Prodotto gpuNvidia5070 = new Prodotto("Nvidia RTX 5070 16GB", "Nvidia graphics card", "Nvidia", 599.99f, 22);
 
         // Methods
 

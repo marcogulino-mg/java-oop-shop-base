@@ -10,20 +10,23 @@ public class Prodotto {
     private int code;
     public String name;
     public String description;
+    public String brand;
     public float price;
     public int iva;
 
     // * Methods
 
-    // Construct
-    public Prodotto(String name, String description, float price, int iva) {
+    // * Construct
+    public Prodotto(String name, String description, String brand, float price, int iva) {
         this.code = generateCode();
         this.name = name;
         this.description = description;
+        this.brand = brand;
         this.price = price;
         this.iva = iva;
     }
 
+    // * Other Methods
     // Price with IVA
     public float taxedPrice() {
         float updatedPrice = this.price + (this.price * (this.iva / 100f));
@@ -52,6 +55,10 @@ public class Prodotto {
         return this.description;
     }
 
+    public String getBrand() {
+        return this.brand;
+    }
+
     public float getPrice() {
         return this.price;
     }
@@ -61,7 +68,6 @@ public class Prodotto {
     }
 
     // * Setter
-
     // Random code generator
     public int generateCode() {
         Random rand = new Random();
