@@ -5,14 +5,15 @@ import java.math.RoundingMode;
 import java.util.Random;
 
 public class Prodotto {
-    // Attributes
+
+    // * Attributes
     private int code;
     public String name;
     public String description;
     public float price;
     public int iva;
 
-    // Methods
+    // * Methods
 
     // Construct
     public Prodotto(String name, String description, float price, int iva) {
@@ -21,17 +22,6 @@ public class Prodotto {
         this.description = description;
         this.price = price;
         this.iva = iva;
-    }
-
-    // Random code generator
-    public int generateCode() {
-        Random rand = new Random();
-        return 100000000 + rand.nextInt(50000);
-    }
-
-    // Price without IVA
-    public float basePrice() {
-        return this.price;
     }
 
     // Price with IVA
@@ -44,14 +34,37 @@ public class Prodotto {
         return bd.floatValue();
     }
 
+    // * Getter
+    public int getCode() {
+        return this.code;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
     // Show product code+name
     public String infosProd() {
         return this.code + this.name;
     }
 
-    // Show product code
-    public int showCode() {
-        return this.code;
+    public String getDescription() {
+        return this.description;
     }
 
+    public float getPrice() {
+        return this.price;
+    }
+
+    public int getIva() {
+        return this.iva;
+    }
+
+    // * Setter
+
+    // Random code generator
+    public int generateCode() {
+        Random rand = new Random();
+        return 100000000 + rand.nextInt(50000);
+    }
 }

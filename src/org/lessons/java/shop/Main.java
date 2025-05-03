@@ -10,8 +10,8 @@ public class Main {
         // Methods
 
         // Show price without IVA
-        System.out.println(latte.basePrice());
-        System.out.println(gpuNvidia5070.basePrice());
+        System.out.println(latte.getPrice());
+        System.out.println(gpuNvidia5070.getPrice());
 
         // Show price with IVA
         System.out.println(latte.taxedPrice());
@@ -22,7 +22,7 @@ public class Main {
         System.out.println(gpuNvidia5070.infosProd());
 
         // Show Product code
-        System.out.println(latte.showCode());
-        System.out.println(gpuNvidia5070.showCode());
+        System.out.println(latte.getCode());
+        System.out.println(gpuNvidia5070.getCode());
     }
 }
